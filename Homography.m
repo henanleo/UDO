@@ -1,9 +1,9 @@
 close all;
 
-seg_data = load('./data2/data01/L_true175_LSCplus.mat'); % 加载分割数据
-disparity_map = imread('./data2/data01/disp.tiff');%视差图
-image1 = imread('./data2/data01/left.tiff');%左图
-image2 = imread('./data2/data01/right.tiff');%右图
+seg_data = load('L_true175_LSCplus.mat'); % 加载分割数据
+disparity_map = imread('disp.tiff');%视差图
+image1 = imread('left.tiff');%左图
+image2 = imread('right.tiff');%右图
 windowSize = 15; % 可以根据需要调整
 
 % 计算熵图
@@ -45,6 +45,7 @@ for i = 1 : num_label
     waitbar(i / num_label, hWaitBar);
 end
 
-save('data2\data01\175_model_all.mat', 'model_all');  % 保存单应矩阵模型 
+save('data\175_model_all.mat', 'model_all');  % 保存单应矩阵模型
+computererror('./data/175_model_all.mat', 'disp.tiff');
 
 fprintf('DONE!');
