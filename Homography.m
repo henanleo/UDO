@@ -46,6 +46,6 @@ for i = 1 : num_label
 end
 
 save('data\175_model_all.mat', 'model_all');  % 保存单应矩阵模型
-computererror('./data/175_model_all.mat', 'disp.tiff');
+computer_error('./data/175_model_all.mat', 'disp.tiff');
 
 fprintf('DONE!');
