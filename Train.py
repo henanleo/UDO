@@ -18,7 +18,7 @@ def suppress_extreme_values(disparity_map, percentile=99):
     return disparity_map
 
 class DisparityOptimizer:
-    def __init__(self, data_path='./data2/data01/'):
+    def __init__(self, data_path=''):
         self.data_path = data_path
         self.iteration_history = {}
         self.edge_points = None
@@ -308,4 +308,4 @@ class DisparityOptimizer:
 
 # 使用示例
 optimizer = DisparityOptimizer()
-optimizer.optimize_disparity(max_iterations=1)
+optimizer.optimize_disparity(max_iterations=5)
