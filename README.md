@@ -17,7 +17,7 @@ Code for paper "Optimising Urban Satellite Disparity Estimation via Unsupervised
 #### Preparing for superpixel segmentation
 
 ```
-python Superpixel/main.py --left_img <left>.tiff --disp_img <disp>.tiff --name YD4552
+python Superpixel/main.py --left_img <left>.tiff --disp_img <disp>.tiff --name <name>
 ```
 
 #### Optimising
